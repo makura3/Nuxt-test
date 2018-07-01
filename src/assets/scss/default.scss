@@ -1,0 +1,30 @@
+// 何かあれば
+* {
+  font-size: 12px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+
+  @include min-mq(md) {
+    width: 940px;
+  }
+}
+
+.fa-spinner {
+  animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

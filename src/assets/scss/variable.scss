@@ -1,0 +1,42 @@
+$black: #333;
+$darkGray: #aaa;
+$gray: #ccc;
+$silver: #eee;
+$lightGray: #fafafa;
+$white: #fff;
+
+$btn: #e6797d;
+$btn-shadow: #bc6266;
+
+$tag: #6AB8C2;
+
+$favorite: #fd9B9f;
+
+
+$shadow: rgba(221, 221, 221, .5);
+
+//////////////////////////
+
+$min-breakpoints: (
+  'sm': 'screen and (min-width: 480px)',
+  'md': 'screen and (min-width: 769px)',
+  'lg': 'screen and (min-width: 1000px)'
+) !default;
+
+$max-breakpoints: (
+  'sm': 'screen and (max-width: 480px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)'
+) !default;
+
+@mixin min-mq($breakpoint: md) {
+  @media #{map-get($min-breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin max-mq($breakpoint: md) {
+  @media #{map-get($max-breakpoints, $breakpoint)} {
+    @content;
+  }
+}
