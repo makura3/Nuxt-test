@@ -1,5 +1,0 @@
-export const LOADING = 'LOADING'
-export const INIT = 'INIT'
-export const SEL_FAVORITE = 'SEL_FAVORITE'
-export const ADD_FAVORITE = 'ADD_FAVORITE'
-export const DEL_FAVORITE = 'DEL_FAVORITE'
