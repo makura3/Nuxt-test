@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-text",
+  "version": "1.0.0",
+  "description": "Nuxt.jsの導入部分",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+github.com:makura3/Nuxt-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makura3/Nuxt-test/issues"
+  },
+  "homepage": "https://github.com/makura3/Nuxt-test#readme",
+  "dependencies": {
+    "firebase": "^5.2.0",
+    "nuxt": "^1.4.1"
+  }
+}
