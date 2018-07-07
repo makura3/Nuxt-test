@@ -30,7 +30,5 @@ module.exports = {
   css: [
     //cssがあればここに
   ],
-  plugins: [
-    //pluginsがあればここに
-  ]
+  plugins: [{ src: '~/plugins/firebaseInit' }]
 }
