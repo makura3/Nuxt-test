@@ -35,20 +35,6 @@ const store = () =>
             list.push(data)
           })
           commit('INIT', list)
-
-          favRef.get().then(favRes => {
-            let favList = []
-            favRes.forEach(doc => {
-              let data = {
-                id: doc.id,
-                favorite: doc.data().addFlg
-              }
-              favList.push(data)
-            })
-            commit('SEL_FAVORITE', favList)
-          })
-          //loading finish
-          commit('LOADING', false)
         })
       }
     },
