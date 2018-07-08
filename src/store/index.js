@@ -6,8 +6,6 @@ import db from '~/plugins/firebaseInit'
 
 const itemRef = db.collection('items')
 
-// myPluginはストアが初期化されたときに呼ばれます
-// 第二引数はactionに渡ります INIT, 'hoge' みたいな
 const myPlugin = store => store.dispatch(INIT)
 
 const store = () =>
@@ -22,7 +20,6 @@ const store = () =>
     },
     actions: {
       [INIT]({ commit }) {
-        // commit('LOADING', true)
         itemRef.get().then(res => {
           let list = []
           res.forEach(doc => {
