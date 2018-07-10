@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <p v-for="(item, index) in init" :key="index">{{item.name}}</p>
-  </div>
+  <ul>
+    <li v-for="(item,index) in init" :key="index">
+      {{ item.id }}：{{ item.name }}
+    </li>
+  </ul>
 </template>
 
 <script>

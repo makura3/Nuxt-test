@@ -6,7 +6,7 @@ import db from '~/plugins/firebaseInit'
 
 const itemRef = db.collection('items')
 
-const myPlugin = store => store.dispatch(INIT)
+const initPlugin = store => store.dispatch(INIT)
 
 const store = () =>
   new Vuex.Store({
@@ -14,12 +14,12 @@ const store = () =>
       itemList: []
     },
     mutations: {
-      [INIT](state, data) {
+      INIT(state, data) {
         state.itemList = data
       }
     },
     actions: {
-      [INIT]({ commit }) {
+      INIT({ commit }) {
         itemRef.get().then(res => {
           let list = []
           res.forEach(doc => {
@@ -40,7 +40,7 @@ const store = () =>
         return state.itemList
       }
     },
-    plugins: [myPlugin]
+    plugins: [initPlugin]
   })
 
 export default store
